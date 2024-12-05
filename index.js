@@ -24,4 +24,18 @@ function calulator(num1,num2,operator){
 calculator(2,3,add); //5
 calculator(2,3,multiply);　//6 
 
+//Image switcher 
+let image = document.querySelector('img');
+
+image.onclick = function() {
+
+  let mySrc = image.getAttribute('src');
+  if(mySrc === 'images/image.jpg'){
+    image.setAtrribute('src','images/image2.jpg');
+  }else {
+    image.setAttribute('src','images/image.jpg');
+  }
+}
+    
+
   
