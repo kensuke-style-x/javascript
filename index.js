@@ -37,5 +37,30 @@ image.onclick = function() {
   }
 }
     
+//Greeting 
+let heading = document.querySelector('h1');
 
+function setUserName(){
+  let nickName = prompt('Please enter your nickname.');
+  if(!nickName){
+    setUserName();
+  } else {
+    localStorage.setItem('name',nickName);
+    heading.innerHTML = 'You are Star, ' + nickName;
+  }
+}
+
+if(!localStorage.getItem('name')){
+  setUserName();
+} else {
+  let storedName = localStorage.getItem('name');
+  heading.innerHTML = 'You are Star, ' + storedName;
+}
+
+heading.onClick = function(){
+  setUserName();
+}
+  
+    
+  
   
